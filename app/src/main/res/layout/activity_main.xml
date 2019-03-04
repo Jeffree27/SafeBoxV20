@@ -4,34 +4,51 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:clipToPadding="false">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:elevation="6dp"
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:elevation="6dp"
-        android:minHeight="?attr/actionBarSize"
+        android:layout_height="60dp"
+        android:layout_below="@id/toolbar"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/layout_shadow"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:tabBackground="@color/colorPrimary"
         app:tabIconTintMode="src_over"
-        app:tabIndicator="@color/colorPrimaryDark"
-        app:tabIndicatorColor="@color/colorPrimaryDark" />
+        app:tabIndicator="@color/colorAccent2"
+        app:tabIndicatorColor="@color/colorAccent2"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="3dp"
+        app:tabInlineLabel="true"
+        app:tabSelectedTextColor="@color/colorPrimaryDark"
+        app:tabTextColor="@color/Txt"
+        tools:tabGravity="fill" />
+<View
+    android:id="@+id/line1"
+    android:layout_below="@id/tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#bcbbbbbb"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/tab_layout"
-        android:background="@color/colorPrimary" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/line1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorFragment" />
+
 </RelativeLayout>

@@ -12,69 +12,120 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                    android:layout_width="361dp"
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="320dp"
+                android:layout_height="490dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="22dp"
+                card_view:cardCornerRadius="1dp">
+
+                <TextView
+                    android:id="@+id/UnlockingTitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:text="Unlocking the Safebox"
                     android:textAlignment="center"
                     android:textColor="@color/colorAccent"
                     android:textSize="18dp"
-                    android:textStyle="bold">
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="35dp"
-                android:textColor="@color/Txt"
-                android:textAlignment="center"
-                android:textSize="15dp"
-                android:text="When unlocking the safe box, the facial feature must be recognized within five tries. Otherwise, a five-second video clip will be taken and will be sent to Dropbox that can be accessed through the mobile application. A notification will also be sent via SMS regarding the attempted intrusion. Furthermore, the process will stop. However, if the facial recognition is verified, it will send a verification code through SMS that will serve as the second authentication. The verification code must be entered within one minute, otherwise it will expire and the process would stop. If the code that is entered by the user matches with the given code, then the vault will be unlocked. Otherwise, the process will stop. ">
-            </TextView>
+                    android:textStyle="bold"></TextView>
 
+                <TextView
+                    android:id="@+id/UnlockingDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="480dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lineSpacingExtra="8sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="10dp"
+                    android:text="When unlocking the safe box, the facial feature must be recognized within five tries. Otherwise, a five-second video clip will be taken and will be sent to Dropbox that can be accessed through the mobile application. A notification will also be sent via SMS regarding the attempted intrusion. Furthermore, the process will stop. However, if the facial recognition is verified, it will send a verification code through SMS that will serve as the second authentication. The verification code must be entered within one minute, otherwise it will expire and the process would stop. If the code that is entered by the user matches with the given code, then the vault will be unlocked. Otherwise, the process will stop. "
+                    android:textColor="@color/Txt"
+                    android:textSize="15dp"></TextView>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view2"
+                android:layout_width="320dp"
+                android:layout_height="330dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="22dp"
+                card_view:cardCornerRadius="1dp">
             <TextView
-                android:layout_width="361dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textSize="18dp"
+                android:paddingBottom="20dp"
+                android:layout_marginTop="20dp"
                 android:text="Enrollment of Facial Feature"
-                android:textColor="@color/colorAccent">
-            </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="35dp"
-            android:textColor="@color/Txt"
-            android:textAlignment="center"
-            android:textSize="15dp"
-            android:text="When enrolling a facial feature, the system will ask the user to enter the passcode for validation. When the passcode is correct, a verification code will be sent via SMS. Then, if the verification code is correct, the system will prompt the user to position face in front of the camera. The system would then automatically take snapshots of the user’s face and only then would the new facial feature be saved. ">
-        </TextView>
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lineSpacingExtra="8sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="5dp"
+                    android:text="When enrolling a facial feature, the system will ask the user to enter the passcode for validation. When the passcode is correct, a verification code will be sent via SMS. Then, if the verification code is correct, the system will prompt the user to position face in front of the camera. The system would then automatically take snapshots of the user’s face and only then would the new facial feature be saved. "
+                    android:textColor="@color/Txt"
+                    android:textSize="15dp"></TextView>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view3"
+                android:layout_width="320dp"
+                android:layout_height="260dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="22dp"
+                card_view:cardCornerRadius="1dp">
             <TextView
-                android:layout_width="361dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="20dp"
                 android:text="Changing the Passcode"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:textSize="18dp"
                 android:textColor="@color/colorAccent">
             </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="35dp"
-                android:textColor="@color/Txt"
-                android:textAlignment="center"
-                android:textSize="15dp"
-                android:text="When changing the passcode, a verification will be sent first. If the verification code is correct, the user can now enter the new preferred passcode and it will be saved after entering. If the code expires or if the code entered did not match the correct code, the process will end. ">
-            </TextView>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lineSpacingExtra="8sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="5dp"
+                    android:text="When changing the passcode, a verification will be sent first. If the verification code is correct, the user can now enter the new preferred passcode and it will be saved after entering. If the code expires or if the code entered did not match the correct code, the process will end. "
+                    android:textColor="@color/Txt"
+                    android:textSize="15dp"></TextView>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view4"
+                android:layout_width="320dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="22dp"
+                card_view:cardCornerRadius="1dp">
             <TextView
-                android:layout_width="361dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:paddingBottom="20dp"
+                android:layout_marginTop="20dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:textSize="18dp"
@@ -82,14 +133,20 @@
                 android:text="Detecting Physical Intrusion">
             </TextView>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="35dp"
+                android:layout_width="match_parent"
+                android:layout_height="387dp"
+                android:lineSpacingExtra="8sp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:textColor="@color/Txt"
                 android:textAlignment="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="5dp"
                 android:textSize="15dp"
                 android:text="In case that the shock sensor is triggered, the system would sound an alarm for five minutes, automatically record a five-second clip that will be sent to dropbox, and send a notification via SMS and mobile app log. The user has the option to stop the alarm by scanning his facial feature or by inputting the passcode if in case it was triggered accidentally.">
             </TextView>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
     </ScrollView>
 

@@ -1,17 +1,18 @@
 package com.example.jeffree.safeboxv20;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuItem;
-
 
 public class MainActivity extends AppCompatActivity {
     String title;
@@ -40,12 +41,12 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.dropbox,
                 R.drawable.help,
         };
-        for(int i = 0; i < imageResId.length; i++){
+        for (int i = 0; i < imageResId.length; i++) {
             tabLayout.getTabAt(i).setIcon(imageResId[i]);
         }
+
+
     }
-
-
     public class SectionPagerAdapter extends FragmentPagerAdapter {
 
         public SectionPagerAdapter(FragmentManager fm) {
@@ -70,6 +71,22 @@ public class MainActivity extends AppCompatActivity {
         public int getCount() {
             return 3;
         }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch(position){
+                case 0:
+                    title = new String("Activity");
+                    return title;
+                case 1:
+                    title = new String ("Dropbox");
+                    return title;
+                case 2:
+                    title = new String ("Help");
+                    return title;
+            }
+            return null;
+        }
     }
 
     @Override
@@ -92,8 +109,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void logOut() {
-        Intent logoutIntent = new Intent(MainActivity.this, LoginActivity.class);
-        startActivity(logoutIntent);
-        finish();
+
+       new AlertDialog.Builder(this)
+                .setIcon(R.drawable.logosmall)
+                .setMessage("Are you sure you want to sign out?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent logoutIntent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(logoutIntent);
+                        finish();
+                    }
+                })
+        .setNegativeButton("No",null)
+        .show();
     }
+
 }
